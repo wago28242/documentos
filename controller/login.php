@@ -51,4 +51,13 @@ class loginController
 
     }
 
+    public function logout(){
+    session_start();
+    session_unset();
+    session_destroy();
+   
+    
+        $this->view = 'login_usuario';
+    }
+
 }
