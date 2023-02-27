@@ -9,3 +9,4 @@ define("DB_PASS", "");
 /* Default options */
 define("DEFAULT_CONTROLLER", "login");
 define("DEFAULT_ACTION", "index");
+?>
