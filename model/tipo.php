@@ -60,7 +60,6 @@ class Tipo
         $exists = false;
         if (isset($param["id"]) and $param["id"] != '') {
             $actualTipo = $this->getTipoById($param["id"]);
-            print_r($actualTipo);
            
             if (isset($actualTipo["TIP_ID"])) {
                 $exists = true;
@@ -82,7 +81,7 @@ class Tipo
 
         /* Database operations */
         if ($exists) {
-            echo "update";
+          
             $sql = "UPDATE " . $this->table . " SET TIP_PREFIJO=?, TIP_NOMBRE=? WHERE TIP_ID=?";
             $stmt = $this->conection->prepare($sql);
             $res = $stmt->execute([$prefijo, $nombre, $id]);
